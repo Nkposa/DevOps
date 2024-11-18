@@ -15,5 +15,5 @@ jobs:
        run: echo "USERNAME=$[user_1]" >> $GITHUB_ENV
 
      - name: printing value
-       run: echo $user_1   
+       run: echo $USERNAME   
 
