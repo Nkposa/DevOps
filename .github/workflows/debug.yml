@@ -1,0 +1,19 @@
+name: explore Debugging
+
+on:
+  workflow_dispatch: 
+
+env:
+    user_1: naveen
+    user_2: krishna    
+
+jobs:
+    debug:
+     runs-on: ububuntu-latest
+     steps:
+     - name: debugging job
+       run: echo "USERNAME=$[user_1]" >> $GITHUB_ENV
+
+     - name: printing value
+       run: echo $user_1   
+
