@@ -1,6 +1,7 @@
 name: explore Debugging
 
 on:
+  push:  
   workflow_dispatch: 
 
 env:
