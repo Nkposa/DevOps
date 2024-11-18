@@ -9,7 +9,7 @@ env:
 
 jobs:
     debug:
-     runs-on: ububuntu-latest
+     runs-on: ubuntu-latest
      steps:
      - name: debugging job
        run: echo "USERNAME=$[user_1]" >> $GITHUB_ENV
