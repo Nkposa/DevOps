@@ -17,6 +17,7 @@ jobs:
 
      - name: printing value
        run: |
+        echo trying with debug
         echo $USERNAME  
         exit 1 
 
