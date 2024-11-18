@@ -13,7 +13,7 @@ jobs:
      runs-on: ubuntu-latest
      steps:
      - name: debugging job
-       run: echo "USERNAME=$[user_1]" >> $GITHUB_ENV
+       run: echo "USERNAME=${{env.user_1}}" >> $GITHUB_ENV
 
      - name: printing value
        run: echo $USERNAME   
