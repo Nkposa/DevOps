@@ -27,7 +27,7 @@ on:
                 required: true    
 jobs:
     test_job:
-        runs-on: ububuntu-latest
+        runs-on: ubuntu-22.04
         steps:
             - name: print workflow inputs
               run: |
