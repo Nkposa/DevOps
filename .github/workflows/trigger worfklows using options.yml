@@ -19,11 +19,7 @@ on:
                 
             Deploy:
                 description: "what is the env"
-                type: choice
-                options:
-                    - prod
-                    - non-prod
-                    - stage
+                type: environment
                 required: true
             Build_num:
                 description: "provide the version to upgrade"
