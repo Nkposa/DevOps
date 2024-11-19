@@ -25,6 +25,10 @@ on:
                     - non-prod
                     - stage
                 required: true
+            Build_num:
+                description: "provide the version to upgrade"
+                type: number
+                required: true    
 jobs:
     test_job:
         runs-on: ububuntu-latest
