@@ -36,7 +36,7 @@ jobs:
                 echo " which env? ${{ inputs.Deploy}}"
            
             - name: running tesets if env is prod
-              if: ${{ inputs.run_tests == 'true' }}  
+              if: ${{ inputs.run_tests }}  
               run: echo selected true and testing.....
                 
 
