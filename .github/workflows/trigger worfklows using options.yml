@@ -1,0 +1,43 @@
+name: trigger workkflow using options
+
+on: 
+    workflow_dispatch: 
+        inputs:
+            run_tests:
+                description: "do you want to run tests?"
+                type: boolean
+                required: true
+
+            testing:
+                description: "which type of run you want"
+                type: choice
+                options:
+                    - unit
+                    - integration
+                    - all
+                required: true
+                
+            Deploy:
+                description: "what is the env"
+                type: choice
+                options:
+                    - prod
+                    - non-prod
+                    - stage
+                required: true
+jobs:
+    test_job:
+        runs-on: ububuntu-latest
+        steps:
+            - name: print workflow inputs
+              run: |
+                echo "running tests? ${{ inputs.run_tests}}"
+                echo " which type of tests? ${{ inputs.testing}}"
+                echo " which env? ${{ inputs.Deploy}}"
+           
+            - name: running tesets if env is prod
+              if: ${{ inputs.run_tests == 'true' }}  
+              run: echo selected true and testing.....
+                
+
+            
